@@ -1,0 +1,491 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5dc;
+    color: #263b28;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+header {
+    background-color: #16351c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 21px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #a5d66a;
+}
+
+#botonMenu {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* INICIO */
+
+.inicio {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            rgba(12, 45, 20, 0.65),
+            rgba(12, 45, 20, 0.75)
+        ),
+        url("img/bosque.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.inicio-contenido {
+    animation: aparecer 1.5s ease;
+}
+
+.inicio h1 {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.inicio p {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background-color: #7cb342;
+
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #9ccc65;
+    transform: scale(1.05);
+}
+
+
+/* SECCIONES */
+
+.seccion {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 80px 30px;
+}
+
+.seccion h2 {
+    text-align: center;
+
+    margin-bottom: 45px;
+
+    font-size: 38px;
+
+    color: #285d34;
+}
+
+.fondo-claro {
+    max-width: none;
+    background-color: #e9f2df;
+}
+
+
+/* QUE SON LOS BOSQUES */
+
+.contenido-doble {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.contenido-doble p {
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.imagen-placeholder {
+    background-color: #c9dfaa;
+
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 80px;
+
+    border-radius: 20px;
+}
+
+
+/* TARJETAS */
+
+.tarjetas {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.tarjeta {
+    padding: 35px 20px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta span {
+    font-size: 50px;
+}
+
+.tarjeta h3 {
+    margin: 15px 0;
+
+    color: #376d3e;
+}
+
+
+/* BIODIVERSIDAD */
+
+.texto-centro {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 19px;
+}
+
+.animales {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 45px;
+}
+
+.animal {
+    font-size: 60px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.animal:hover {
+    transform: scale(1.2);
+}
+
+.animal p {
+    font-size: 18px;
+}
+
+
+/* AMENAZAS */
+
+.amenazas {
+    max-width: none;
+
+    background-color: #efe3cf;
+}
+
+.amenaza span {
+    font-size: 55px;
+}
+
+
+/* ACCIONES */
+
+.acciones {
+    max-width: 900px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.acciones div {
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.acciones span {
+    font-size: 40px;
+}
+
+.acciones p {
+    font-size: 18px;
+}
+
+
+/* FINAL */
+
+.mensaje-final {
+    padding: 90px 30px;
+
+    text-align: center;
+
+    color: white;
+
+    background-color: #214c2b;
+}
+
+.mensaje-final h2 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.mensaje-final p {
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+#botonBosque {
+    padding: 15px 25px;
+
+    background-color: #9ccc65;
+
+    border: none;
+
+    border-radius: 30px;
+
+    color: #17321c;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#botonBosque:hover {
+    transform: scale(1.1);
+
+    background-color: white;
+}
+
+#mensajeArbol {
+    margin-top: 25px;
+
+    font-size: 22px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #102816;
+
+    color: white;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenido-doble {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .inicio h1 {
+        font-size: 42px;
+    }
+
+    .inicio p {
+        font-size: 19px;
+    }
+
+
+    #botonMenu {
+        display: block;
+    }
+
+
+    .menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background-color: #16351c;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .menu.activo {
+        display: flex;
+    }
+
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .acciones {
+        grid-template-columns: 1fr;
+    }
+
+
+    .seccion h2 {
+        font-size: 30px;
+    }
+
+
+    .mensaje-final h2 {
+        font-size: 32px;
+    }
+
+}
